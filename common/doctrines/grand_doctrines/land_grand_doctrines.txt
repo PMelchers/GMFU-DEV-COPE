@@ -285,7 +285,7 @@ grand_battleplan = {
     }
     enable_tactic = tactic_planned_attack
     
-    max_planning = 0.05
+    max_planning = 0.1
     max_dig_in = 2.5
     command_power_gain_mult = 0.10
     army_strength_factor = 0.05

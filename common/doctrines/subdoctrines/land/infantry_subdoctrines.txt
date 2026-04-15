@@ -517,31 +517,31 @@ mounted_infantry = {
         }
         limbered_combat_support = {
             pack_artillery_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             artillery_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             heavy_artillery_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             rocket_artillery_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             pack_antitank_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             anti_tank_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             heavy_anti_tank_brigade = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             anti_air = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
             heavy_anti_air = {
-                maximum_speed = 0.5
+                maximum_speed = 0.1
             }
         }
 
