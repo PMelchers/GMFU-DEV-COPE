@@ -6,8 +6,7 @@ state = {
 	manpower = 139059
 	
 	resources = {
-		steel = 80 # was: 12.000
-		aluminium = 90 # was: 14.000
+		steel = 80 # was: 12.000 # was: 14.000
 		coal = 20 # initial distribution = with infra 3.2 / 36 total
 	}
 
