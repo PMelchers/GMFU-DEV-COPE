@@ -9,12 +9,8 @@ focus_tree = {
 		}
 	}
 
-	continuous_focus_position = { x = 600 y = 1270 }
+	continuous_focus_position = { x = 600 y = 1400 }
 
-	inlay_window = {
-		id = rom_national_humiliation_inlay_window
-		position = { x = 1250 y = 1070 }
-	}
 
 	default = no
   ############################
@@ -23,7 +19,7 @@ focus_tree = {
 	focus = {
 		id = ROM_great_depresion_recovery
 		icon = GFX_focus_hol_abandon_the_gold_standard
-		x = 5
+		x = 6
 		y = 0
 
 		cost = 8
@@ -63,7 +59,7 @@ focus_tree = {
 		id = ROM_danubian_transport_network
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = ROM_great_depresion_recovery }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = ROM_great_depresion_recovery
 
@@ -193,7 +189,7 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_oil_production
 		icon = GFX_focus_PER_increase_oil_sales
-		x = -7
+		x = -5
 		y = 1
 
 		prerequisite = { focus = ROM_great_depresion_recovery }
@@ -232,7 +228,7 @@ focus_tree = {
 	focus = {
 		id = ROM_civil_works
 		icon = GFX_goal_generic_construction
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = ROM_great_depresion_recovery
 		prerequisite = { focus = ROM_great_depresion_recovery }
@@ -270,7 +266,7 @@ focus_tree = {
 		id = ROM_invest_in_the_iar
 		#icon = GFX_goal_generic_construct_military
 		icon = GFX_focus_SMB_purchase_aircraft
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = ROM_great_depresion_recovery
 		prerequisite = { focus = ROM_great_depresion_recovery }
@@ -438,11 +434,11 @@ focus_tree = {
 		id = ROM_a_war_economy
 		icon = GFX_focus_generic_total_war
 		x = 0
-		y = 1
+		y = 2
 
 		# prerequisite = { focus = ROM_build_mils focus = ROM_build_eq }
 		prerequisite = { focus = ROM_national_defense_industry }
-		mutually_exclusive = { focus = ROM_business_investment }
+		#mutually_exclusive = { focus = ROM_business_investment }
 		mutually_exclusive = { focus = ROM_balanced_approach }
 		relative_position_id = ROM_national_defense_industry
 		cost = 10
@@ -453,7 +449,7 @@ focus_tree = {
 		
 
 		available = {
-			threat > 0.2
+
 		}
 
 		bypass = {
@@ -866,7 +862,7 @@ focus_tree = {
 	focus = {
 		id = ROM_malaxa
 		icon = GFX_focus_generic_industry_3
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = ROM_danubian_transport_network
 		prerequisite = { focus = ROM_danubian_transport_network }
@@ -939,7 +935,7 @@ focus_tree = {
 	focus = {
 		id = ROM_hunedoara_steel_works
 		icon = GFX_focus_generic_steel
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = ROM_danubian_transport_network
 		prerequisite = { focus = ROM_danubian_transport_network }
@@ -987,7 +983,7 @@ focus_tree = {
 	focus = {
 		id = ROM_domestic_industry
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = ROM_danubian_transport_network
 		prerequisite = { focus = ROM_danubian_transport_network }
@@ -1027,59 +1023,17 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ROM_business_investment
-		icon = GFX_focus_generic_economic_recovery
-		x = 0
-		y = 1
-		relative_position_id = ROM_hunedoara_steel_works
-		prerequisite = { focus = ROM_hunedoara_steel_works }
-		prerequisite = { focus = ROM_malaxa }
-		prerequisite = { focus = ROM_domestic_industry }
-		mutually_exclusive = { focus = ROM_balanced_approach }
-		mutually_exclusive = { focus = ROM_a_war_economy }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			threat > 0.2
-		}
-
-		bypass = {
-
-		}
-
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			
-		}
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = ROM_nationwide_business_investment_idea
-				days = 730
-			}
-		}
-	}
-
-	focus = {
 		id = ROM_balanced_approach
 		icon = GFX_goal_generic_consumer_goods
-		x = 4
-		y = 0
+		x = -2
+		y = 2
 
 		prerequisite = { focus = ROM_hunedoara_steel_works }
 		prerequisite = { focus = ROM_malaxa }
 		prerequisite = { focus = ROM_domestic_industry }
 
-		relative_position_id = ROM_business_investment
+		relative_position_id = ROM_domestic_industry
 
-		mutually_exclusive = { focus = ROM_business_investment }
 		mutually_exclusive = { focus = ROM_a_war_economy }
 		cost = 10
 
@@ -1089,7 +1043,6 @@ focus_tree = {
 		
 
 		available = {
-			threat > 0.2
 		}
 
 		bypass = {
@@ -1105,53 +1058,18 @@ focus_tree = {
 				idea = ROM_nationwide_business_investment_idea
 				days = 365
 			}
-		}
-	}
-
-	focus = {
-		id = ROM_prospering_economy
-		icon = GFX_focus_GER_kdf_wagen
-		x = 2
-		y = 1
-		prerequisite = { focus = ROM_balanced_approach focus = ROM_business_investment }
-		relative_position_id = ROM_business_investment
-		cost = 8
-
-		ai_will_do = {
-			factor = 9
-		}
-		
-
-		available = {
-			NOT = {
-				has_idea = ROM_nationwide_business_investment_idea
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_offsite_building = { 
-				type = industrial_complex level = 3 
-			}
 			add_ideas = ROM_prospering_economy_idea
-		}		
+		}
 	}
 
 	focus = {
 		id = ROM_nationalise_the_industry
 		icon = GFX_ITA_industrial_triangle
-		x = 6
-		y = 2
-		# prerequisite = { focus = ROM_a_war_economy focus = ROM_balanced_approach }
-		prerequisite = { focus = ROM_a_war_economy }
-		relative_position_id = ROM_business_investment
+		x = 3
+		y = 1
+		prerequisite = { focus = ROM_a_war_economy focus = ROM_balanced_approach }
+		#prerequisite = { focus = ROM_a_war_economy }
+		relative_position_id = ROM_balanced_approach
 		# mutually_exclusive = { focus = ROM_private_ownership }
 		cost = 8
 
@@ -1185,10 +1103,10 @@ focus_tree = {
 	focus = {
 		id = ROM_private_ownership
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 2
-		y = 2
-		prerequisite = { focus = ROM_prospering_economy }
-		relative_position_id = ROM_business_investment
+		x = 1
+		y = 1
+		prerequisite = { focus = ROM_balanced_approach }
+		relative_position_id = ROM_balanced_approach
 		# mutually_exclusive = { focus = ROM_nationalise_the_industry }
 		cost = 8
 
@@ -1284,10 +1202,10 @@ focus_tree = {
 	focus = {
 		id = ROM_army_takeover
 		icon = GFX_focus_generic_mass_production
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = ROM_nationalise_the_industry
-		prerequisite = { focus = ROM_private_ownership focus = ROM_nationalise_the_industry }
+		prerequisite = { focus = ROM_nationalise_the_industry }
 		# prerequisite = { focus = ROM_build_mils focus = ROM_build_eq }
 
 		cost = 8
@@ -1420,10 +1338,9 @@ focus_tree = {
 		id = ROM_booming_economy
 		icon = GFX_focus_GER_wirtschaftswunder
 		x = 0
-		y = 3
-		relative_position_id = ROM_business_investment
-		prerequisite = { focus = ROM_business_investment }
-		prerequisite = { focus = ROM_private_ownership }
+		y = 2
+		relative_position_id = ROM_balanced_approach
+		prerequisite = { focus = ROM_balanced_approach }
 
 		cost = 10
 
@@ -1514,6 +1431,8 @@ focus_tree = {
 
   ############################
   ###### POLITCAL BRANCH #####
+  ############################
+
   ############################
 	# focus = {
 	# 	id = ROM_waning_french_influence
@@ -2965,6 +2884,8 @@ focus_tree = {
 		}
 	}
 
+
+
   ############################
   ######## ARMY BRANCH #######
   ############################
@@ -3616,7 +3537,6 @@ focus_tree = {
 			}
 			NOT = { has_war_with = FRA }
 			NOT = { has_war_with = SOV }
-			NOT = { has_completed_focus = ROM_goga_codreanu_pact }
 			NOT = { has_idea = ROM_armor_purchases_CZE }
 			NOT = { has_idea = ROM_armor_purchases_FRA }
 			NOT = { has_idea = ROM_armor_purchases_GER }
@@ -3780,7 +3700,6 @@ focus_tree = {
 					value > 74
 				}
 			}
-			NOT = { has_completed_focus = ROM_goga_codreanu_pact }
 			NOT = { has_idea = ROM_armor_purchases_CZE }
 			NOT = { has_idea = ROM_armor_purchases_FRA }
 			NOT = { has_idea = ROM_armor_purchases_GER }

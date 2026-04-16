@@ -116,7 +116,6 @@ recruit_character = NZL_loenard_isitt
 recruit_character = NZL_arthur_nevill
 
 recruit_character = NZL_william_stevenson
-recruit_character = NZL_bernard_ashwin
 recruit_character = NZL_henry_esau_avery
 recruit_character = NZL_leslie_macfarlane
 recruit_character = NZL_walter_broadfoot

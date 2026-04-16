@@ -314,12 +314,6 @@ characters={
 				}
 			available = {
 				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					has_completed_focus = ROM_goga_codreanu_pact
-				}
-				if = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}

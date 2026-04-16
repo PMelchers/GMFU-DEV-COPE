@@ -62,7 +62,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.2
 				production_factory_start_efficiency_factor = -0.1
 				industrial_capacity_factory = -0.2
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.4
 			}
 		}
@@ -179,9 +179,9 @@ ideas = {
 			}
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.075
+				#production_factory_max_efficiency_factor = 0.025
 				# production_factory_start_efficiency_factor = 0.075
-				production_speed_buildings_factor = 0.075
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -709,7 +709,26 @@ ideas = {
 			}			
 
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
+			}
+		}
+		ROM_the_sentinel_of_the_motherland_2 = {
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+
+			}			
+
+			modifier = {
+				army_morale_factor = 0.06
+				max_dig_in = 4
+				military_leader_cost_factor = -0.4
+				conscription = 0.03
 			}
 		}
 
@@ -766,26 +785,6 @@ ideas = {
 			}
 		}
 
-		ROM_the_sentinel_of_the_motherland_2 = {
-			name = ROM_the_sentinel_of_the_motherland
-
-			picture = ROM_the_sentinel_of_the_motherland_2
-
-			removal_cost = -1
-			
-			allowed = {
-				original_tag = ROM
-			}
-
-			allowed_civil_war = {
-
-			}			
-
-			modifier = {
-				army_morale_factor = 0.10
-				conscription = 0.02
-			}
-		}
 
 		ROM_the_sentinel_of_the_motherland_3 = {
 			name = ROM_the_sentinel_of_the_motherland
@@ -898,9 +897,28 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_weekly = -0.002
+				#stability_weekly = -0.002
 				stability_factor = -0.1
 				fascism_drift = 0.01
+			}
+		}
+		ROM_king_carol_ii_handled = {
+
+			picture = generic_king_handled
+
+			removal_cost = -1
+			
+			allowed = {
+				original_tag = ROM
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				neutrality_drift = 0.02
+				political_power_gain = 0.25
 			}
 		}
 
