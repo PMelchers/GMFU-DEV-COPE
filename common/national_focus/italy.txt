@@ -67,7 +67,7 @@ focus_tree = {
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = -1
 		y = 0
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -91,7 +91,7 @@ focus_tree = {
 		x = -5
 		y = 1
 		relative_position_id = ITA_denounce_the_sanctions
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -103,9 +103,9 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ITA_ind_econ_1
 			custom_effect_tooltip = generic_skip_one_line_tt
-			# add_ideas = ITA_europe_trade
+			add_ideas = ITA_europe_trade
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 
@@ -283,7 +283,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_economic_independence
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -298,7 +298,7 @@ focus_tree = {
 				add_idea = ITA_ind_econ_2
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -310,7 +310,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_mining_effort_dora
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -338,7 +338,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -350,7 +350,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_mining_effort_dora
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -382,7 +382,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 
@@ -395,7 +395,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_terni_mines
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -418,7 +418,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 
 	}
@@ -431,7 +431,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_aluminium_developments
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -454,7 +454,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 
 	}
@@ -469,29 +469,13 @@ focus_tree = {
 		available = {
 		}
          
-		cost = 6
+		cost = 5
 		x = 5
 		y = 1
 		relative_position_id = ITA_denounce_the_sanctions
 		available_if_capitulated = yes
 		completion_reward = {
-			
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			add_ideas = ITA_Military_Construction
 		}
 	}
 
@@ -502,7 +486,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_focus_mil_expansion_dora
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -549,7 +533,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = ITA_focus_mil_expansion_dora
-		cost = 6
+		cost = 5
 		available = {
 			has_full_control_of_state = 159
 		}
@@ -584,46 +568,30 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_fiocchi_munizioni
-		cost = 6
+		cost = 5
 		available = {
 			has_full_control_of_state = 159
 		}
 
 		completion_reward = {
-			add_ideas = ITA_Military_Construction
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
-			# random_owned_controlled_state = {
-			# 	limit = {
-			# 		free_building_slots = {
-			# 			building = industrial_complex
-			# 			size > 1
-			# 			include_locked = yes
-			# 		}
-			# 		is_core_of = ROOT
-			# 	}
-			# 	add_extra_state_shared_building_slots = 2
-			# 	add_building_construction = {
-			# 		type = arms_factory
-			# 		level = 2
-			# 		instant_build = yes
-			# 	}
-			# }
-			# random_owned_controlled_state = {
-			# 	limit = {
-			# 		free_building_slots = {
-			# 			building = industrial_complex
-			# 			size > 1
-			# 			include_locked = yes
-			# 		}
-			# 		is_core_of = ROOT
-			# 	}
-			# 	add_extra_state_shared_building_slots = 2
-			# 	add_building_construction = {
-			# 		type = industrial_complex
-			# 		level = 2
-			# 		instant_build = yes
-			# 	}
-			# }
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -635,7 +603,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_focus_mil_expansion_dora
-		cost = 6
+		cost = 5
 		available = {
 			has_full_control_of_state = 159
 		}
@@ -675,7 +643,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_denounce_the_sanctions
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -704,7 +672,7 @@ focus_tree = {
 			# 	}
 			# }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 
@@ -937,7 +905,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_highway_expansion
-		cost = 10
+		cost = 8
 		available = {
 		}
 
@@ -1117,7 +1085,7 @@ focus_tree = {
 			# 	# }
 			# }
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_56_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_49_days_meritocracy_tt
 		}
 	}
 
@@ -1130,7 +1098,7 @@ focus_tree = {
 		x = 1 #
 		y = 1
 		relative_position_id = ITA_highway_expansion
-		cost = 10
+		cost = 8
 		available = {
 		}
 
@@ -1171,7 +1139,7 @@ focus_tree = {
 					prioritize = { 156 2 162 } #CALABRIA as main fallback
 					add_building_construction = {
 						type = dockyard
-						level = 2
+						level = 3
 						instant_build = yes
 					}
 					# add_building_construction = {
@@ -1222,7 +1190,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_56_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_49_days_meritocracy_tt
 		}
 	}
 
@@ -1235,7 +1203,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_strengthen_northern_industry
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1263,7 +1231,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -1275,7 +1243,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = ITA_strengthen_northern_industry
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1304,7 +1272,7 @@ focus_tree = {
 			}
 			add_ideas = ITA_farming
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -1317,7 +1285,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_light_industry
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1329,7 +1297,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ITA_nationalisation
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -1341,7 +1309,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_industry_nationalisation
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1355,21 +1323,21 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = industrial_complex
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -1380,7 +1348,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_heavy_industry
-		cost = 6
+		cost = 5
 
 		completion_reward = {
 			add_research_slot = 1
@@ -1391,12 +1359,14 @@ focus_tree = {
 		id = ITA_proclaim_the_empire
 		icon = GFX_goal_ita_victory_by_any_means
 		available = {
-			271 = {
-				CONTROLLER = {
-					OR = {
-						tag = ITA
+			OR = {
+				271 = {
+					CONTROLLER = {
 						is_subject_of = ITA
 					}
+				}
+				NOT = {
+					country_exists = ETH
 				}
 			}
 		}
@@ -1515,7 +1485,7 @@ focus_tree = {
 		icon = GFX_ITA_africa
 		x = -9
 		y = 1
-		cost = 5
+		cost = 2
 		ai_will_do = {
 			factor = 1
 		}
@@ -1620,7 +1590,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_develop_the_empire
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -2477,12 +2447,12 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = political_reformer_tfc
 			reduce_focus_completion_cost = {
-				focus = { ITA_bank_loans_dora ITA_light_industry ITA_agricultural_expansion ITA_industry_nationalisation ITA_heavy_industry ITA_german_investments }
+				focus = { ITA_bank_loans_dora ITA_light_industry ITA_strengthen_northern_industry ITA_modernize_the_mezzogiorno ITA_agricultural_expansion ITA_industry_nationalisation ITA_heavy_industry ITA_german_investments }
 				cost = 7
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			reduce_focus_completion_cost = {
-				focus = { ITA_highway_expansion ITA_investments_in_edison ITA_strengthen_northern_industry ITA_modernize_the_mezzogiorno }
+				focus = { ITA_highway_expansion ITA_investments_in_edison   }
 				cost = 14
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3305,7 +3275,7 @@ focus_tree = {
 		relative_position_id = ITA_oil_prospecting
 		x = -1
 		y = 1
-		cost = 5
+		cost = 3
 		ai_will_do = {
 			factor = 1
 		}
@@ -3557,7 +3527,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ITA_german_investments_idea
 			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = ITA_timer_35_days_meritocracy_tt
+			custom_effect_tooltip = ITA_timer_28_days_meritocracy_tt
 		}
 	}
 	
@@ -3910,7 +3880,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = ITA_claims_on_france
-		cost = 5
+		cost = 10
 
 		completion_reward = {
 			add_stability = 0.05
@@ -3996,7 +3966,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_start_italianisation_yug
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4163,7 +4133,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_start_italianisation_gre
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4224,7 +4194,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_start_italianisation_alb
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4522,7 +4492,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = ITA_victory_aegyptus
-		cost = 5
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -4622,7 +4592,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_develop_egypt
-		cost = 5
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -4714,7 +4684,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_develop_egypt
-		cost = 2
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -4823,7 +4793,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_victory_ethiopia
-		cost = 3
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -5273,7 +5243,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			date > 1943.1.1
+			date > 1942.1.1
 		}
 		completion_reward = {
 			custom_effect_tooltip = ITA_plunder_africa_tt
@@ -6742,16 +6712,16 @@ focus_tree = {
 				limit = {
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 					is_controlled_by = ROOT
 					is_core_of = ROOT
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -6836,11 +6806,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			# date > 1937.1.1
-			OR = {
-				has_completed_focus = ITA_defend_empire
-				has_completed_focus = ITA_navy_fascination
-			}
+			date > 1937.6.1
 		}
 
 		available_if_capitulated = yes

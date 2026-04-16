@@ -360,7 +360,10 @@
   ITA_timer_21_days__navy_tt:0 "Taking $ITA_navy_fascination$ will reduce the time this focus takes down to §G21§! days."
   ITA_timer_14_days__navy_tt:0 "Taking $ITA_navy_fascination$ will reduce the time this focus takes down to §G14§! days."
 
+  ITA_timer_28_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G28§! days."
   ITA_timer_35_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G35§! days."
+  ITA_timer_42_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G42§! days."
+  ITA_timer_49_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G49§! days."
   ITA_timer_56_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G56§! days."
   ITA_timer_14_days_meritocracy_tt:0 "Taking $ITA_meritocracy_tfc$ will reduce the time this focus takes down to §G14§! days."
 
