@@ -1,0 +1,5 @@
+# Ignore Markdown files
+*.md
+
+# Ignore local VS Code workspace settings
+.vscode/settings.json

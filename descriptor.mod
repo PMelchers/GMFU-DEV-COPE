@@ -7,7 +7,7 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-name="GMFU DEV"
+name="GMFU DEV COPE"
 picture="thumbnail.png"
 replace_path="common/ai_equipment"
 replace_path="common/ai_strategy"
