@@ -7476,7 +7476,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRA_reclaim_territory_in_south_america
-		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		prerequisite = { focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
 		cost = 5
 		ai_will_do = {
 			factor = 15
@@ -7509,60 +7509,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = BRA_demand_portugese_territory
-		icon = GFX_focus_por_luso_tropicalism
-		x = 0
-		y = 1
-		relative_position_id = BRA_empire_of_brazil
-		prerequisite = { focus = BRA_empire_of_brazil }
-		mutually_exclusive = { focus = BRA_demand_portugese_submission }
-		cost = 5
-		ai_will_do = {
-			factor = 13
-			modifier = {
-				factor = 0
-				OR = {
-					has_war_with_major = yes
-					is_in_faction_with = POR
-				}
-			}
-		}
-		bypass = {
-			POR = {
-				OR = {
-					exists = no
-					is_subject_of = ROOT
-				}
-			}
-		}
-		will_lead_to_war_with = POR
-		available = {
-			any_other_country = {
-				original_tag = POR
-				exists = yes
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			POR = {
-				country_event = {
-					id = JUNO_brazil_events.70
-					hours = 1
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = BRA_demand_portugese_submission
 		icon = GFX_focus_generic_attack_portugal
 		x = 2
 		y = 1
 		relative_position_id = BRA_empire_of_brazil
 		prerequisite = { focus = BRA_empire_of_brazil }
-		mutually_exclusive = { focus = BRA_demand_portugese_territory }
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -7614,8 +7566,8 @@ focus_tree = {
 		icon = GFX_focus_BRA_restore_brazilian_honor
 		x = 0
 		y = 1
-		relative_position_id = BRA_demand_portugese_territory
-		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		relative_position_id = BRA_demand_portugese_submission
+		prerequisite = { focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
 		cost = 10
 		ai_will_do = {
 			factor = 30
@@ -7636,8 +7588,8 @@ focus_tree = {
 		icon = GFX_focus_generic_africa_factory
 		x = 2
 		y = 1
-		relative_position_id = BRA_demand_portugese_territory
-		prerequisite = { focus = BRA_demand_portugese_territory focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
+		relative_position_id = BRA_demand_portugese_submission
+		prerequisite = { focus = BRA_demand_portugese_submission focus = BRA_reclaim_territory_in_south_america }
 		cost = 10
 		ai_will_do = {
 			factor = 1
