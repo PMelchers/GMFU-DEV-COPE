@@ -1,0 +1,50 @@
+000_speeches_category = {
+
+        Enable_Speeches = {
+
+            icon = GFX_decision_category_ger_reichskommissariats
+
+            allowed = {
+                always = yes
+            }
+
+            visible = {
+                always = yes
+            }
+
+            available = {
+				NOT = { has_country_flag = ai_speeches }
+            }
+            
+
+            complete_effect = {
+                set_country_flag = ai_speeches
+            }
+            
+            fire_only_once = no
+        }
+		
+        Disable_Speeches = {
+
+            icon = GFX_decision_category_ger_reichskommissariats
+
+            allowed = {
+                always = yes
+            }
+
+            visible = {
+                always = yes
+            }
+
+            available = {
+                has_country_flag = ai_speeches
+            }
+            
+
+            complete_effect = {
+                clr_country_flag = ai_speeches
+            }
+            
+            fire_only_once = no
+        }
+    }

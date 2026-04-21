@@ -1,0 +1,28 @@
+spriteTypes = {	
+
+	### categories
+	
+	spriteType = {
+		name = "GFX_decision_cat_generic_adolf"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_adolf.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_benito"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_benito.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_ENG"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_ENG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_generic_USA"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_USA.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_great_patriotic"
+		texturefile = "gfx/interface/decisions/decision_great_patriotic.dds"
+	}

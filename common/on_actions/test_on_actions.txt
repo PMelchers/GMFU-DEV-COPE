@@ -1,0 +1,71 @@
+   on_actions = {
+   on_declare_war = {
+        effect = {
+            if = {
+                limit = {
+                    ROOT = { tag = JAP }
+                    FROM = { tag = CHI }
+                }
+			        country_event = { id = speech.10 }
+                    every_country = {
+			        if = {
+                    limit = { has_country_flag = ai_speeches }
+			        sound_effect = sp_usa_dem_AL_spirit.of.america
+			        }
+		        }
+            }
+            if = {
+                limit = {
+                    ROOT = { tag = JAP }
+                    FROM = { tag = USA }
+                }
+			        country_event = { id = speech.11 }
+                    every_country = {
+			        if = {
+                    limit = { has_country_flag = ai_speeches }
+			        sound_effect = sp_USA_warwithJAP
+			        }
+		        }
+            }
+            if = {
+                limit = {
+                    ROOT = { tag = GER }
+                    FROM = { tag = BEL }
+                }
+                    every_country = {
+			        if = {
+                    limit = { has_country_flag = ai_speeches }
+			        sound_effect = sp_ger_sudeten
+			        }
+		        }
+            }
+            if = {
+                limit = {
+                    ROOT = { tag = GER }
+                    FROM = { tag = SOV }
+                }
+			    country_event = { id = speech.9 }
+                    every_country = {
+			        if = {
+                    limit = { has_country_flag = ai_speeches }
+			        sound_effect = sp_ger_russia
+			        sound_effect = sp_ger_waronusa
+			        }
+			        }
+			        }
+            if = {
+                limit = {
+                    ROOT = { tag = GER }
+                    FROM = { tag = POL }
+                }
+			        country_event = { id = speech.8 }
+                    every_country = {
+			        if = {
+                    limit = { has_country_flag = ai_speeches }
+			        sound_effect = sp_ger_POL
+			        }
+			        }
+			        }
+		        }
+            }
+        }

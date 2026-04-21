@@ -1,0 +1,202 @@
+ideas = {
+
+	country = {
+	
+    GER_Citadel = {
+		name = "Unternehmen Zitadelle"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = NOR_anti_communist_sentiment
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			modifier = {
+
+			}
+
+		}
+		
+    GER_Summer_Offensive = {
+		name = "Unternehmen Blau"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = NOR_anti_communist_sentiment
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			modifier = {
+
+			}
+
+		}
+		
+    GER_Danzig = {
+		name = "Fall Weiss"
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = ETH_conservative_high_command
+
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+			modifier = {
+
+			}
+
+		}
+
+		GER_Endsieg = {
+		name = "Endsieg"
+			allowed = {
+				
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = hol_caved_to_the_germans
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_core_attack_factor = 0.10
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+                army_attack_factor = -0.05
+                army_defence_factor = -0.05
+				max_dig_in_factor = 0.02
+				pocket_penalty = -0.2
+				supply_combat_penalties_on_core_factor = -0.15
+				cas_damage_reduction = 0.15
+			}
+		}
+
+######SOV#######
+
+		SOV_Operation_Bagration = {
+		name = "Operation Bagration"
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FIN_german_threat
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+
+			modifier = {
+            army_core_attack_factor = 0.05
+			}
+
+
+		}
+
+		SOV_Winter_Offensive = {
+		name = "Soviet Winter Offensive"
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.05
+				breakthrough_bonus_against = 0.05
+			}
+
+			modifier = {
+            acclimatization_cold_climate_gain_factor = 0.5
+			army_core_attack_factor = 0.05
+			}
+
+		}
+
+######ITA#######	
+
+		ITA_Med_Control = {
+		name = "Seize Control of the Medeteranian"
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = BRA_navy
+
+			modifier = {
+            convoy_escort_efficiency = 0.05
+			naval_damage_factor = 0.02
+			naval_defense_factor = 0.02
+			}
+
+		}
+		
+		ITA_Rally_People = {
+		name = "Mobilize The Workforce"
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+
+			modifier = {
+                industrial_capacity_factory = 0.05
+                production_factory_efficiency_gain_factor = 0.10
+			}
+
+		}
+	}
+}

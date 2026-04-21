@@ -669,14 +669,47 @@ focus_tree = {
 			add_stability = -0.05
 		}
 	}	
-	
 	focus = {
-		id = NZL_the_manpower_act
-		icon = GFX_focus_RAJ_headhunt_army_personell
+		id = NZL_national_defense_institute
+		icon = GFX_focus_research
 		prerequisite = { focus = NZL_social_security_act focus = NZL_ratana_alliance }
 		x = 0
 		y = 3
 		relative_position_id = NZL_the_first_labor_government
+
+		cost =6
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+	focus = {
+		id = NZL_the_manpower_act
+		icon = GFX_focus_RAJ_headhunt_army_personell
+		prerequisite = { focus = NZL_national_defense_institute }
+		x = 0
+		y = 1
+		relative_position_id = NZL_national_defense_institute
 
 		cost = 6
 
@@ -710,40 +743,7 @@ focus_tree = {
             }						
 		}
 	}
-	focus = {
-		id = NZL_national_defense_institute
-		icon = GFX_focus_research
-		prerequisite = { focus = NZL_the_manpower_act }
-		x = 0
-		y = 1
-		relative_position_id = NZL_the_manpower_act
 
-		cost =6
-
-		ai_will_do = {
-			factor = 30
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
 	
 	############################
 	## PETER FRASER #
@@ -752,12 +752,12 @@ focus_tree = {
 	focus = {
 		id = NZL_peter_fraser_ascension
 		icon = GFX_goal_NZL_fraser
-		prerequisite = { focus = NZL_national_defense_institute }
+		prerequisite = { focus = NZL_the_manpower_act }
 		prerequisite = { focus = NZL_broadcasting_act }	
 		prerequisite = { focus = NZL_the_four_quaters }		
 		x = 0
 		y = 1
-		relative_position_id = NZL_national_defense_institute
+		relative_position_id = NZL_the_manpower_act
 
 		cost = 6
 
@@ -1500,7 +1500,7 @@ focus_tree = {
 				tooltip = army_armor_attack_factor_tt
 			}
 			mio:NZL_nz_railways_organization = {
-				complete_mio_trait = nzl_trait_thunder_warfare
+				add_mio_size = 1
 			} 				
 			
 		}
@@ -1543,8 +1543,8 @@ focus_tree = {
 				tooltip = army_armor_speed_factor_tt
 			}
 			mio:NZL_nz_railways_organization = {
-				complete_mio_trait = nzl_trait_lightning_warfare
-			} 				
+				add_mio_size = 1
+			} 	 				
 		}
 	}
 
@@ -3646,9 +3646,7 @@ focus = {
 
 
 
-		completion_reward = {
-  			custom_effect_tooltip = available_industrial_concern
-			show_ideas_tooltip = NZL_wairarapa_ranches          
+		completion_reward = {       
 			upgrade_economy_law = yes
 			random_owned_controlled_state = {
 				prioritize = { 284 723 }
@@ -3665,20 +3663,7 @@ focus = {
 					level = 4
 					instant_build = yes
 				}
-			}
-			# custom_effect_tooltip = NZL_modify_the_labour_government_dynamic_modifier_tt			
-			# add_to_variable = {
-                # NZL_LG_var_industrial_capacity_factory = 0.025
-                # tooltip = industrial_capacity_factory_tt
-            # }					
-			# add_to_variable = {
-                # NZL_LG_var_industrial_capacity_dockyard = 0.025
-                # tooltip = industrial_capacity_dockyard_tt
-            # }
-			# add_to_variable = {
-                # NZL_LG_var_production_factory_max_efficiency_factor = 0.025
-                # tooltip = production_factory_max_efficiency_factor_tt
-            # }				
+			}			
 		}
 	}
 	
@@ -3868,7 +3853,7 @@ focus = {
                 # tooltip = conversion_cost_civ_to_mil_factor_tt
             # }	
 			add_to_variable = {
-                NZL_LG_var_conversion_cost_mil_to_civ_factor = -0.2
+                NZL_LG_var_conversion_cost_mil_to_civ_factor = -0.25
                 tooltip = conversion_cost_mil_to_civ_factor_tt
             }				
 			add_to_variable = { 
@@ -5014,21 +4999,6 @@ focus = {
 
 
 	############################
-	#### GO FASCIST SECTION ####
-	############################
-
-	
-	##################
-	##### Shared #####
-	##################
-	
-
-	############################
-	##### GO ALONE SECTION #####
-	############################
-
-
-	############################
 	##### POST CAPITULATION FOCUSES #####
 	############################
 
@@ -5047,7 +5017,6 @@ focus = {
 		
 		allow_branch = {
 			is_ai = no
-            is_government_in_exile = yes
 		}
 		
 		
@@ -5064,11 +5033,16 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
-		completion_reward = {
+		completion_reward = {		
 			add_political_power = 100
 			add_stability = 0.05
 			add_war_support = 0.1
-			
+			if = {
+				limit = {
+					NOT = {has_dynamic_modifier = {  modifier = NZL_IOG_the_government_in_exile_dynamic }}
+				}
+				add_dynamic_modifier = { modifier =  NZL_IOG_the_government_in_exile_dynamic}
+			}
 			custom_effect_tooltip = NZL_modify_the_government_in_exile_dynamic_modifier_tt
 			add_to_variable = {
                NZL_GIE_var_exiled_government_weekly_manpower = 500
