@@ -383,9 +383,9 @@
 
   ENG_nzl_dev_tt1:0 "§YThis Focus will start 90 day development ticks for New Zealand, which will mark core states to grant:§!"
   ENG_nzl_dev_tt2:0 "§G     2 Civilian Factories§!"
-  ENG_nzl_dev_tt3:0 "§G     1 Dockyard§!"
+  ENG_nzl_dev_tt3:0 "§G     1 Military Factories§!"
   ENG_nzl_dev_tt4:0 "§G     4 Extra Building Slots§!"
-  ENG_nzl_dev_tt5:0 "§YMarks to add 2 Civs, 1 Dock, and 4 Building Slots.§!§R Will only apply after finishing Development.§! Will repeat until Finish Development Focus is taken, or there are no more states to develop."
+  ENG_nzl_dev_tt5:0 "§YMarks to add 2 Civs, 1 Mil, and 4 Building Slots.§!§R Will only apply after finishing Development.§! Will repeat until Finish Development Focus is taken, or there are no more states to develop."
 
   ENG_general_dev_tt1:0 "§REvery State can only be marked and developed ONCE!§!\n§4The Consumer Goods Factor will stop applying if there are no more states to develop.§!"
   ENG_general_dev_tt2:0 "§RThis Debuff Will be removed upon completing the development branch.§!"

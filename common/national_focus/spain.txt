@@ -76,6 +76,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+		
 			add_popularity = {
 			    ideology = fascism
 			    popularity = 0.1
@@ -83,6 +84,10 @@ focus_tree = {
 			add_popularity = {
 			    ideology = neutrality
 			    popularity = 0.05
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 200
 			}
 			#hidden_effect = {activate_mission = SPA_military_plot_nationalists}
 		}
