@@ -1190,7 +1190,7 @@
 	focus = {
 		id = SAF_RWK_special_service_battalion
 		icon = GFX_goal_generic_army_doctrines
-		x = 24
+		x = 20
 		y = 0
 
 		cost = 5
@@ -1213,7 +1213,7 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 20
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = SAF_special_service_battalion
 				cost_reduction = 0.25
@@ -1230,11 +1230,11 @@
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = SAF_RWK_special_service_battalion }
 		mutually_exclusive = {
-			focus = SAF_RWK_q_services_corps
+			focus = SAF_RWK_lions_of_the_desert
 			focus = SAF_RWK_armor_effort
 		}
 		relative_position_id = SAF_RWK_special_service_battalion
-		x = -8
+		x = -4
 		y = 2
 
 		cost = 5
@@ -1263,6 +1263,14 @@
 				uses = 2
 				category = infantry_weapons
 			}
+			add_tech_bonus = {
+				name = SAF_improve_the_three_oh_three
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			
+			
 		}
 	}
 			
@@ -1272,9 +1280,7 @@
 		id = SAF_RWK_needs_of_the_many
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = SAF_RWK_first_sa_brigrade }
-		mutually_exclusive = {
-			focus = SAF_RWK_only_the_strongest
-		}
+		
 		relative_position_id = SAF_RWK_first_sa_brigrade
 		x = -2
 		y = 1
@@ -1299,12 +1305,8 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = SAF_improve_the_three_oh_three
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
-			}
+			add_ideas = SAF_mobilize_the_population
+			add_manpower = 200000
 		}
 	}
 
@@ -1345,39 +1347,6 @@
 			}
 		}
 	}
-
-	focus = {
-		id = SAF_RWK_mobilize_the_springboks
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAF_RWK_equipment_effort }
-		x = 0
-		y = 1
-		relative_position_id = SAF_RWK_equipment_effort
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_ideas = SAF_mobilize_the_population
-			add_manpower = 200000
-	}
-	}
 	
 		
 		#ONLY THE STRONGEST
@@ -1387,11 +1356,9 @@
 		id = SAF_RWK_only_the_strongest
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = SAF_RWK_first_sa_brigrade }
-		mutually_exclusive = {
-			focus = SAF_RWK_needs_of_the_many
-		}
+		
 		relative_position_id = SAF_RWK_needs_of_the_many
-		x = 4
+		x = 2
 		y = 0
 
 		cost = 5
@@ -1420,6 +1387,7 @@
 				uses = 2
 				category = infantry_weapons
 			}
+			army_experience = 25
 		}
 	}
 
@@ -1430,7 +1398,7 @@
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = SAF_RWK_only_the_strongest }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = SAF_RWK_only_the_strongest
 		mutually_exclusive = { 
 			focus = SAF_RWK_heavy_AT_bonus 
@@ -1455,12 +1423,12 @@
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = SAF_heavy_artillery2
 			add_tech_bonus = {
-				name = SAF_expand_the_south_african_artillery
-				bonus = 0.5
-				uses = 1
-				category = artillery
+				name = SAF_modern_at_guns
+				bonus = 0.75
+				uses = 2
+				technology = heavy_artillery2
+				technology = heavy_artillery3
 			}
 		}
 	}
@@ -1476,6 +1444,16 @@
 		ai_will_do = {
 		factor = 1
 		}
+
+		completion_reward = {
+			add_ideas = SAF_heavy_artillery2
+			add_tech_bonus = {
+				name = SAF_expand_the_south_african_artillery
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
 	}
 	
 	#HEAVY ANTI-TANK BRANCH
@@ -1485,7 +1463,7 @@
 		icon = GFX_goal_generic_army_artillery
 		prerequisite = { focus = SAF_RWK_only_the_strongest }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = SAF_RWK_only_the_strongest
 		mutually_exclusive = { 
 			focus = SAF_RWK_expand_the_south_african_artillery 
@@ -1514,7 +1492,7 @@
 			add_tech_bonus = {
 				name = SAF_modern_at_guns
 				bonus = 0.75
-				uses = 1
+				uses = 2
 				technology = heavy_antitank
 				technology = heavy_antitank2
 			}
@@ -1539,7 +1517,7 @@
 			################################
 
 	focus = {
-		id = SAF_RWK_q_services_corps
+		id = SAF_RWK_lions_of_the_desert
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = { focus = SAF_RWK_special_service_battalion }
 		mutually_exclusive = {
@@ -1571,15 +1549,12 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = SAF_q_services_corps
-				bonus = 1.0
-				uses = 2
-				technology = motorised_infantry
-				technology = tech_logistics_company
-				technology = tech_logistics_company2
-				technology = tech_logistics_company3
-				technology = tech_logistics_company4
+				name = SAF_mechanization_effort
+				bonus = 0.5
+				uses = 1
+				category = cat_mechanized_equipment
 			}
+			add_ideas = SAF_mech_motorized_reduction
 		}
 	}
 
@@ -1588,10 +1563,10 @@
 	focus = {
 		id = SAF_RWK_cape_motor_divisions
 		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = SAF_RWK_q_services_corps }
-		x = -2
+		prerequisite = { focus = SAF_RWK_lions_of_the_desert }
+		x = -1
 		y = 1
-		relative_position_id = SAF_RWK_q_services_corps
+		relative_position_id = SAF_RWK_lions_of_the_desert
 		mutually_exclusive = { focus = SAF_RWK_desert_jackal_armoured_cars }
 
 		cost = 5
@@ -1620,6 +1595,7 @@
 				uses = 1
 				category = support_tech
 			}
+			recruit_character = SAF_lion_king
 		}
 	}
 
@@ -1658,6 +1634,8 @@
 				category = motorized_equipment
 				category = support_tech
 			}
+			add_ideas = SAF_vehicle_speed_breakthrough_spirit
+			
 		}
 	}
 
@@ -1698,47 +1676,15 @@
 		}
 	}
 
-	focus = {
-		id = SAF_RWK_division_speed_spirit
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = SAF_RWK_rocket_artillery_research }
-		x = 0
-		y = 1
-		relative_position_id = SAF_RWK_rocket_artillery_research
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_ideas = SAF_division_speed_spirit
-		}
-	}
-
 	# AC BRANCH
 
 	focus = {
 		id = SAF_RWK_desert_jackal_armoured_cars
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = SAF_RWK_q_services_corps }
-		x = 2
+		prerequisite = { focus = SAF_RWK_lions_of_the_desert }
+		x = 1
 		y = 1
-		relative_position_id = SAF_RWK_q_services_corps
+		relative_position_id = SAF_RWK_lions_of_the_desert
 		mutually_exclusive = { focus = SAF_RWK_cape_motor_divisions }
 		cost = 5
 
@@ -1765,15 +1711,14 @@
 				name = SAF_desert_jackal_armoured_cars
 				bonus = 0.75
 				ahead_reduction = 0.5
-				uses = 2
+				uses = 1
 				technology = armored_car2
-				technology = armored_car3
 			}
 		}
 	}
 
 	focus = {
-		id = SAF_RWK_integrated_supply_command
+		id = SAF_RWK_weaponizing_the_desert_jackal
 		icon = GFX_goal_generic_army_doctrines
 		prerequisite = { focus = SAF_RWK_desert_jackal_armoured_cars }
 		x = 0
@@ -1800,35 +1745,33 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF_integrated_supply_command
-				cost_reduction = 0.2
-				uses = 1
-				category = land_doctrine
-			}
 			add_tech_bonus = {
-				name = SAF_integrated_supply_command_artillery
+				name = SAF_weaponizing_the_desert_jackal
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = artillery
 			}
-			add_tech_bonus = {
-				name = SAF_integrated_supply_command_armored_cars
-				bonus = 0.5
-				uses = 1
-				category = cat_armored_cars
-			}
+			IF = {
+                limit = {
+                    has_character = JAP_tomoyuki_yamashita
+                    JAP_tomoyuki_yamashita = {
+                        NOT = { has_trait = trait_mountaineer }
+                    }
+                }
+                JAP_tomoyuki_yamashita = {
+                    add_trait = { trait = trait_mountaineer }
+                }
+            }
 		}
 	}
 
 	focus = {
-		id = SAF_RWK_south_african_military_college
+		id = SAF_RWK_mk_3_recon_car
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAF_RWK_integrated_supply_command }
+		prerequisite = { focus = SAF_RWK_weaponizing_the_desert_jackal }
 		x = 0
 		y = 1
-		relative_position_id = SAF_RWK_integrated_supply_command
+		relative_position_id = SAF_RWK_weaponizing_the_desert_jackal
 
 		cost = 5
 
@@ -1850,96 +1793,12 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF_south_african_military_college
-				cost_reduction = 0.25
-				uses = 2
-				category = land_doctrine
-			}
-			add_mastery_bonus = {
-				name = SAF_south_african_military_college
-				bonus = 0.2
-				days = 360
-				folder = land
-			}
-			add_mastery = {
-				amount = 50
-				folder = land
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_RWK_armored_car_program
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = SAF_RWK_south_african_military_college }
-		x = 0
-		y = 1
-		relative_position_id = SAF_RWK_south_african_military_college
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			army_experience = 10
 			add_tech_bonus = {
-				name = SAF_armored_car_program
-				bonus = 0.5
+				name = SAF_mk_3_recon_car
+				bonus = 0.75
+				ahead_reduction = 0.5
 				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_RWK_desert_recon_columns
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = SAF_RWK_armored_car_program }
-		x = 0
-		y = 1
-		relative_position_id = SAF_RWK_armored_car_program
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			army_experience = 15
-			add_equipment_to_stockpile = {
-				type = motorized_equipment_1
-				amount = 150
+				technology = armored_car3
 			}
 		}
 	}
@@ -1947,10 +1806,10 @@
 	focus = {
 		id = SAF_RWK_armored_screen_doctrine
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = SAF_RWK_desert_recon_columns }
-		x = 0
+		prerequisite = { focus = SAF_RWK_special_service_battalion }
+		x = 3
 		y = 1
-		relative_position_id = SAF_RWK_desert_recon_columns
+		relative_position_id = SAF_RWK_special_service_battalion
 
 		cost = 5
 
@@ -1972,12 +1831,22 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
 			add_doctrine_cost_reduction = {
 				name = SAF_armored_screen_doctrine
-				cost_reduction = 0.2
-				uses = 1
+				cost_reduction = 0.25
+				uses = 2
 				category = land_doctrine
+			}
+			add_mastery_bonus = {
+				name = SAF__south_african_military_college
+				bonus = 0.2
+				days = 360
+				folder = land
+			}
+			add_mastery = {
+				amount = 50
+				folder = land
 			}
 		}
 	}
@@ -1990,10 +1859,10 @@
 		prerequisite = { focus = SAF_RWK_special_service_battalion }
 		mutually_exclusive = {
 			focus = SAF_RWK_first_sa_brigrade
-			focus = SAF_RWK_q_services_corps
+			focus = SAF_RWK_lions_of_the_desert
 		}
 		relative_position_id = SAF_RWK_special_service_battalion
-		x = 6
+		x = 5
 		y = 2
 
 		cost = 5
@@ -2018,7 +1887,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SAF_armor_effort
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = armor
 			}
@@ -2197,7 +2066,7 @@
 	focus = {
 		id = SAF_RWK_commit_to_the_five_year_plan
 		icon = GFX_goal_generic_build_airforce
-		x = 35
+		x = 30
 		y = 0	
 
 		cost = 10
@@ -2514,7 +2383,7 @@
 	focus = {
 		id = SAF_RWK_seaward_defence_force
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 40
+		x = 35
 		y = 0		
 
 		cost = 5
@@ -2939,4 +2808,3 @@
 		}
 	}
 }		
-

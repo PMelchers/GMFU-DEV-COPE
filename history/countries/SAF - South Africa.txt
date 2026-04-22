@@ -31,6 +31,8 @@ set_grand_doctrine = new_fleet_in_being
 
 set_variable = { number_of_mios = 0 }
 
+
+
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }

@@ -186,6 +186,15 @@ ideas = {
 
 		}
 
+		SAF_army_xp_bonus = {
+      	  allowed = { always = yes }
+      	  visible = { always = yes }
+
+       	 modifier = {
+           	 army_experience_gain = 0.05
+        	}
+    	}
+
 		SAF_cheap_labor_1 = {
 			allowed = {
 				always = no
@@ -323,7 +332,25 @@ ideas = {
 			}
 		}
 		
-		
+		SAF_mech_motorized_reduction = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_mechanized_motorized_reduction
+
+			equipment_bonus = {
+				mechanized_equipment = { build_cost_ic = -0.05 instant = yes }
+				motorized_equipment = {build_cost_ic = -0.05 instant = yes}
+			}
+		}
+
 		SAF_equipment_reduction = {
 		allowed = {
 			always = no
@@ -441,6 +468,33 @@ ideas = {
 				army_speed_factor = 0.05
 			}
 		}
+
+		SAF_vehicle_speed_breakthrough_spirit = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_army_bonus
+
+			equipment_bonus = {
+				mechanized_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				army_speed_factor = 0.05
+			}
 
 		SAF_scw_veterans = {
 			allowed = {

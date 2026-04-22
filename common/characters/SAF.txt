@@ -27,6 +27,35 @@ characters={
 		}
 	}
 
+
+    SAF_lion_king = {
+        advisor={
+			slot = high_command
+			idea_token = SAF_lion_king
+			ledger = army
+			allowed = {
+				original_tag = SAF
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				has_completed_focus = SAF_RWK_cape_motor_divisions
+			}
+			traits = {
+				army_cavalry_3
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		name="SAF_lion_king"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+	}
+
 	SAF_jan_smuts = {
 		name=SAF_jan_smuts
 		portraits={
