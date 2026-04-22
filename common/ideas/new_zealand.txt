@@ -7,7 +7,7 @@ ideas = {
 			allowed = {
 				always = no
 			}
-
+ 
 			removal_cost = -1
 			
 			equipment_bonus = {
@@ -584,10 +584,7 @@ ideas = {
 
 			available = {
 				OWNER = {
-					OR = { 
-						has_completed_focus = NZL_expand_the_university_of_auckland
-						has_completed_focus = NZL_industrial_conscription
-					}
+					has_completed_focus = NZL_wairarapa_sheep_farms
 				}
 			}
 			research_bonus = {

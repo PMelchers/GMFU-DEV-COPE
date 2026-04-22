@@ -1,0 +1,220 @@
+#################
+#German Speeches#
+#################
+
+sound =
+{
+	name = "sp_ger_autobahn"
+	file = "ger_speech/sp_ger_autobahn.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_capitalism"
+	file = "ger_speech/sp_ger_capitalism.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_FRAcap"
+	file = "ger_speech/sp_ger_FRAcap.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_hitlerjugend"
+	file = "ger_speech/sp_ger_hitlerjugend.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_krupp"
+	file = "ger_speech/sp_ger_krupp.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_POL"
+	file = "ger_speech/sp_ger_POL.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_siemens"
+	file = "ger_speech/sp_ger_siemens.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_sudeten"
+	file = "ger_speech/sp_ger_sudeten.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_wien"
+	file = "ger_speech/sp_ger_wien.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_waronrussia"
+	file = "ger_speech/sp_ger_waronrussia.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_waronusa"
+	file = "ger_speech/sp_ger_waronusa.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_totalwar"
+	file = "ger_speech/sp_ger_totalwar.wav"
+
+}
+
+sound =
+{
+	name = "sp_ger_russia"
+	file = "ger_speech/sp_ger_russia.wav"
+
+}
+
+##################
+#Italian Speeches#
+##################
+
+sound =
+{
+	name = "sp_ITA_medi_ocean"
+	file = "ita_speech/sp_ITA_medi_ocean.wav"
+
+}
+
+sound =
+{
+	name = "sp_ITA_partyrally"
+	file = "ita_speech/sp_ITA_partyrally.wav"
+
+}
+
+##################
+#English Speeches#
+##################
+
+sound =
+{
+	name = "sp_eng_bloodtoiltearssweat"
+	file = "eng_speech/sp_eng_bloodtoiltearssweat.wav"
+
+}
+
+sound =
+{
+	name = "sp_eng_fightonthebeaches"
+	file = "eng_speech/sp_eng_fightonthebeaches.wav"
+
+}
+
+sound =
+{
+	name = "sp_eng_finesthour"
+	file = "eng_speech/sp_eng_finesthour.wav"
+
+}
+
+sound =
+{
+	name = "sp_ENG_peaceforourtime"
+	file = "eng_speech/sp_ENG_peaceforourtime.wav"
+
+}
+
+sound =
+{
+	name = "sp_ENG_warwithGER"
+	file = "eng_speech/sp_ENG_warwithGER.wav"
+
+}
+
+##############
+#USA Speeches#
+##############
+
+sound =
+{
+	name = "sp_USA_warwithJAP"
+	file = "usa_speech/sp_USA_warwithJAP.wav"
+
+}
+
+sound =
+{
+	name = "sp_usa_dem_FDR_arsenal.of.democracy"
+	file = "usa_speech/sp_usa_dem_FDR_arsenal.of.democracy.wav"
+
+}
+
+sound =
+{
+	name = "sp_usa_dem_AL_spirit.of.america"
+	file = "usa_speech/sp_usa_dem_AL_spirit.of.america.wav"
+
+}
+
+sound =
+{
+	name = "sp_usa_dem_HT_japs"
+	file = "usa_speech/sp_usa_dem_HT_japs.wav"
+
+}
+
+
+##################
+#Generic Speeches#
+##################
+
+sound =
+{
+	name = "sp_POL_peace"
+	file = "gen_speech/sp_POL_peace.wav"
+
+}
+
+sound =
+{
+	name = "sp_SOV_patrioticwar"
+	file = "gen_speech/sp_SOV_patrioticwar.wav"
+
+}
+
+sound =
+{
+	name = "sp_SOV_bagration"
+	file = "gen_speech/sp_SOV_bagration.wav"
+
+}
+
+##############
+#JAPAN Speeches#
+##############
+
+sound =
+{
+	name = "sp_jap_sino"
+	file = "gen_speech/sp_jap_sino.wav"
+
+}

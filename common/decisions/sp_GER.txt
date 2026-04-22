@@ -1,0 +1,372 @@
+GER_speeches_category = {
+
+	declare_war_SOV = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_war_with_the_ussr
+		}
+
+		available = {
+            has_completed_focus = GER_war_with_the_ussr
+			NOT = {
+            has_idea = GER_barbarossa
+			has_idea = GER_Citadel
+			}
+			OR = {
+				AND = {
+					date > 1942.3.1
+					date < 1942.8.1
+				}
+				AND = {
+					date > 1943.3.1
+					date < 1943.8.1
+				}
+				AND = {
+					date > 1944.3.1
+					date < 1944.8.1
+				}
+				AND = {
+					date > 1945.3.1
+					date < 1945.8.1
+				}
+				AND = {
+					date > 1946.3.1
+					date < 1946.8.1
+				}
+			}
+		}
+
+		complete_effect = {
+		country_event = { id = speech.2 }
+		add_timed_idea = {
+			idea = GER_Summer_Offensive
+			days = 90
+		    } 
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ger_waronrussia
+			}
+			}
+		}
+	}
+		
+		fire_only_once = yes	
+	}
+	
+	Endsieg = {
+
+		icon = GFX_decision_category_ger_reichskommissariats
+
+		allowed = {
+			tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_war_with_the_ussr
+			surrender_progress > 0.01
+		}
+
+		available = {
+            has_completed_focus = GER_war_with_the_ussr
+            surrender_progress > 0.25
+		}
+
+		complete_effect = {
+		country_event = { id = speech.5 }
+		add_timed_idea = {
+			idea = GER_Endsieg
+			days = 120
+		    }
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ger_wien
+			    }
+			}
+		    }
+	}
+		
+		fire_only_once = yes	
+	}
+	
+	Operation_Citadel = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = GER
+		}
+
+		visible = {
+			has_completed_focus = GER_war_with_the_ussr
+		}
+
+		available = {
+            has_completed_focus = GER_war_with_the_ussr
+			NOT = {
+            has_idea = GER_barbarossa
+			has_idea = GER_Summer_Offensive
+			}
+			OR = {
+				AND = {
+					date > 1943.3.1
+					date < 1943.8.1
+				}
+				AND = {
+					date > 1944.3.1
+					date < 1944.8.1
+				}
+				AND = {
+					date > 1945.3.1
+					date < 1945.8.1
+				}
+				AND = {
+					date > 1946.3.1
+					date < 1946.8.1
+				}
+			}
+		}
+
+		complete_effect = {
+		country_event = { id = speech.3 }
+		add_timed_idea = {
+			idea = GER_Citadel
+			days = 90
+		    }
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ger_FRAcap
+			    }
+			}
+		    }
+		}
+		
+		fire_only_once = yes	
+	}
+}
+###SOV###
+
+SOV_speeches_category = {
+	Winter_Offensive = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			tag = SOV
+			has_war_with = GER
+		}
+
+		available = {
+            tag = SOV
+			OR = {
+				AND = {
+					date > 1941.10.1
+					date < 1942.02.1
+				}
+				AND = {
+					date > 1942.10.1
+					date < 1943.02.1
+				}
+				AND = {
+					date > 1943.10.1
+					date < 1944.02.1
+				}
+				AND = {
+					date > 1944.10.1
+					date < 1945.02.1
+				}
+			}
+			NOT = {
+			    GER = {
+                has_idea = GER_barbarossa
+			    }
+				has_idea = SOV_Operation_Bagration
+			}
+		}
+
+		complete_effect = {
+		add_timed_idea = {
+			idea = SOV_Winter_Offensive
+			days = 90
+		    } 
+		country_event = { id = speech.6 }
+           hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_SOV_patrioticwar
+			    }
+			}
+		    }
+		}
+		
+		fire_only_once = yes	
+	}
+	
+    Operation_Bagration = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = SOV
+		}
+
+		visible = {
+			tag = SOV
+			has_war_with = GER
+		}
+
+		available = {
+            tag = SOV
+			OR = {
+				AND = {
+					date > 1943.3.1
+					date < 1943.8.1
+				}
+				AND = {
+					date > 1944.3.1
+					date < 1944.8.1
+				}
+				AND = {
+					date > 1945.3.1
+					date < 1945.8.1
+				}
+				AND = {
+					date > 1946.3.1
+					date < 1946.8.1
+				}
+			}
+			NOT = {
+			    GER = {
+                has_idea = GER_barbarossa
+				has_idea = GER_Summer_Offensive
+				has_idea = GER_Citadel
+			    }
+				SOV = {
+				controls_state = 808
+				controls_state = 206
+                controls_state = 812
+				has_idea = SOV_Winter_Offensive
+				}
+			}
+		}
+
+		complete_effect = {
+		add_timed_idea = {
+			idea = SOV_Operation_Bagration
+			days = 90
+		    } 
+		country_event = { id = speech.4 }
+          hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_SOV_bagration
+			    }
+			}
+		    }
+		}
+		
+		fire_only_once = yes	
+	}
+}
+
+###ITA###
+	
+ITA_speeches_category = {
+	ITA_med_security = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = ITA
+		}
+
+		visible = {
+			tag = ITA
+			has_war_with = ENG
+		}
+
+		available = {
+            tag = ITA
+				AND = {
+					date > 1939.1.1
+					date < 1941.1.1
+				}
+				NOT = { controls_state = 907 }
+		}
+
+		complete_effect = {
+		add_timed_idea = {
+			idea = ITA_Med_Control
+			days = 60
+		    } 
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ITA_medi_ocean
+			    }
+			}
+		    }
+		}
+		
+		fire_only_once = yes	
+	}
+	
+	ITA_Rally = {
+
+		icon = category_usa_intervention_mandate
+
+		allowed = {
+			tag = ITA
+		}
+
+		visible = {
+			tag = ITA
+		}
+
+		available = {
+            tag = ITA
+			OR = {
+            has_completed_focus = ITA_strengthen_northern_industry
+            has_completed_focus = ITA_modernize_the_mezzogiorno
+            }			
+		}
+
+		complete_effect = {
+		add_timed_idea = {
+			idea = ITA_Rally_People
+			days = 150
+		    } 
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ITA_medi_ocean
+			    }
+			}
+		    }
+		}
+		
+		fire_only_once = yes	
+	}
+}	
+
+
+

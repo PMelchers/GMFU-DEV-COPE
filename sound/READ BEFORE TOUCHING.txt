@@ -1,0 +1,2 @@
+so firstly, im kind of a monkey. but the speeches like "sp_FRAcap" is barb sound, ik it sounds weird but while modding this i was stupid af and forgot to turn on speeches so i thought it wasnt working for me so i used already coded in
+names of speeches. so if you wanna change a speech, PLEASE check common/decisions/sp_SPEECHES (speech decisions), and find the right speech there. yes im sorry ill fix it when i have time just DM me

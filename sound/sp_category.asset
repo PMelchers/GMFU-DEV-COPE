@@ -1,0 +1,49 @@
+category = {
+ name = "German Speeches"
+ soundeffects = {
+	sp_ger_FRAcap
+	sp_ger_POL	
+	sp_ger_sudeten
+	sp_ger_wien
+	sp_ger_waronrussia
+	sp_ger_waronusa
+	sp_ger_totalwar
+	sp_ger_russia
+ }
+}
+
+category = {
+ name = "Italian Speeches"
+ soundeffects = {
+	sp_ITA_medi_ocean
+	sp_ITA_partyrally
+}
+
+category = {
+ name = "English Speeches"
+ soundeffects = {
+	sp_eng_bloodtoiltearssweat
+	sp_eng_fightonthebeaches
+	sp_eng_finesthour
+ 	sp_ENG_peaceforourtime
+ 	sp_ENG_warwithGER
+ }
+}
+
+category = {
+ name = "USA Speeches"
+ soundeffects = {
+ 	sp_USA_warwithJAP
+	sp_usa_dem_HT_japs
+	sp_usa_dem_FDR_arsenal.of.democracy
+	sp_usa_dem_AL_spirit.of.america
+ }
+}
+
+category = {
+ name = "Generic Speeches"
+ soundeffects = {
+ 	sp_SOV_patrioticwar
+	sp_SOV_bagration
+ }
+}

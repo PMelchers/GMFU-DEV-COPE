@@ -1,0 +1,40 @@
+#################
+#### GERMANY ####
+#################
+
+GER_speeches_category = {
+	icon = generic_propaganda
+	priority = 999
+
+	picture = GFX_decision_cat_generic_adolf	
+	
+	allowed = {
+		original_tag = GER
+	}
+	
+}
+
+SOV_speeches_category = {
+	icon = generic_propaganda
+	priority = 999
+
+	picture = GFX_decision_great_patriotic	
+	
+	allowed = {
+		original_tag = SOV
+	}
+	
+}
+
+ITA_speeches_category = {
+	icon = generic_propaganda
+	priority = 999
+
+	picture = GFX_decision_cat_generic_benito
+	
+	allowed = {
+		original_tag = ITA
+	}
+	
+}
+

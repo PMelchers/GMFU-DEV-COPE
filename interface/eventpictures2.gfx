@@ -1,0 +1,50 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_speech_1"
+		texturefile = "gfx/event_pictures/GER_flamethrower.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_speech_2"
+		texturefile = "gfx/event_pictures/GER_kursk.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_speech_3"
+		texturefile = "gfx/event_pictures/SOV_winter.tga"
+	}
+	
+	spriteType = { #ENDSIEG
+		name = "GFX_speech_4"
+		texturefile = "gfx/event_pictures/GER_endsieg.tga"
+	}
+	
+	spriteType = { #Danzig
+		name = "GFX_speech_5"
+		texturefile = "gfx/event_pictures/GER_operationbar.tga"
+	}
+
+	spriteType = { #Barbarossa
+		name = "GFX_speech_6"
+		texturefile = "gfx/event_pictures/GER_barb.tga"
+	}
+	
+	spriteType = { #Sino
+		name = "GFX_speech_7"
+		texturefile = "gfx/event_pictures/JAP_Sino.tga"
+	}
+	
+	spriteType = { #Japan vs Usa
+		name = "GFX_speech_8"
+		texturefile = "gfx/event_pictures/JAP_strikes.tga"
+	}
+	
+	spriteType = { #Bagration
+		name = "GFX_speech_9"
+		texturefile = "gfx/event_pictures/SOV_winter2.tga"
+	}
+}
+
+
+

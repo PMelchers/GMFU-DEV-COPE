@@ -3003,7 +3003,7 @@ focus_tree = {
 	
 	focus = {
 		id = GER_totaler_krieg
-		icon = GFX_focus_generic_total_war
+		icon = GFX_GER_total_war
 		prerequisite = { focus = GER_create_rustungsstab }
 		prerequisite = { focus = GER_armament_rationalization }
 
@@ -3037,6 +3037,14 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
 			add_ideas = totaler_krieg_economy
+            hidden_effect = {
+            every_country = {
+			if = {
+            limit = { has_country_flag = ai_speeches }
+			sound_effect = sp_ger_totalwar
+			    }
+			}
+		    }
 
 			if = {
 				limit = {

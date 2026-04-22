@@ -1,0 +1,254 @@
+﻿add_namespace = speech
+
+country_event = {
+	id = speech.1
+	title = speech.1.t
+	desc = speech.1.desc
+	picture = GFX_report_event_stalin_01
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { 
+		name = speech.1.a
+        set_country_flag = ai_speeches
+		load_focus_tree = germannigger_focus
+	}
+	option = { 
+		name = speech.1.b
+        clr_global_flag = ai_speeches
+    }
+}
+
+news_event = {
+	id = speech.2
+	title = speech.2.t
+	desc = speech.2.d
+	picture = GFX_speech_2
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.2.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = speech.2.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = speech.2.c
+		trigger = { TAG = SOV }
+	}
+}
+
+news_event = {
+	id = speech.3
+	title = speech.3.t
+	desc = speech.3.d
+	picture = GFX_speech_1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.3.a
+
+	}
+}
+
+news_event = {
+	id = speech.4
+	title = speech.4.t
+	desc = speech.4.d
+	picture = GFX_speech_9
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.4.a
+
+	}
+}
+
+
+news_event = {
+	id = speech.5
+	title = speech.5.t
+	desc = speech.5.d
+	picture = GFX_speech_4
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.5.a
+		trigger = {
+			NOT = {
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = speech.5.b
+		trigger = { TAG = GER }
+	}
+}
+
+news_event = { 
+	id = speech.6
+	title = speech.6.t
+	desc = speech.6.d
+	picture = GFX_speech_3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.6.a
+		trigger = {
+			NOT = {
+				TAG = GER
+				TAG = SOV
+			}
+		}
+	}
+	option = {
+		name = speech.6.b
+		trigger = { TAG = GER }
+	}
+	option = {
+		name = speech.6.c
+		trigger = { TAG = SOV }
+	}
+}
+
+news_event = { # Typhoon
+	id = speech.7
+	title = speech.7.t
+	desc = speech.7.d
+	picture = GFX_speech_6
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.7.a
+
+	}
+}
+
+news_event = { # Danzig
+	id = speech.8
+	title = speech.8.t
+	desc = speech.8.d
+	picture = GFX_speech_5
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.8.a
+		trigger = {
+			NOT = {
+				TAG = GER
+			}
+		}
+	}
+	option = {
+		name = speech.8.b
+        trigger = { TAG = GER }
+		add_timed_idea = {
+			idea = GER_Danzig
+			days = 30
+		} 
+	}
+}
+
+news_event = { # Barbarossa
+	id = speech.9
+	title = speech.9.t
+	desc = speech.9.d
+	picture = GFX_speech_6
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.9.a
+		trigger = {
+        TAG = GER
+		}
+	}
+	
+	option = {
+		name = speech.9.b
+        trigger = {
+			NOT = {
+				TAG = GER
+			}
+		}
+	}
+}
+
+news_event = { # Japan x China
+	id = speech.10
+	title = speech.10.t
+	desc = speech.10.d
+	picture = GFX_speech_7
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.10.a
+
+	}
+}
+
+news_event = { # Strike USA
+	id = speech.11
+	title = speech.11.t
+	desc = speech.11.d
+	picture = GFX_speech_8
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = speech.11.a
+		trigger = {
+        TAG = JAP
+		}
+	}
+	
+	option = {
+		name = speech.11.b
+        trigger = {
+			NOT = {
+				TAG = JAP
+			}
+		}
+	}
+}
+
+
+
