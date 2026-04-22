@@ -1,0 +1,29 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				if = {
+					limit = {
+						NOT = { has_focus_tree = rework_france }
+					}
+					load_focus_tree = {
+						tree = rework_france
+						keep_completed = no
+					}
+				}
+			}
+
+			SAF = {
+				if = {
+					limit = {
+						NOT = { has_focus_tree = rework_saf }
+					}
+					load_focus_tree = {
+						tree = rework_saf
+						keep_completed = no
+					}
+				}
+			}
+		}
+	}
+}

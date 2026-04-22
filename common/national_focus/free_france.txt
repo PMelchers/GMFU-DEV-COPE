@@ -466,7 +466,7 @@
 				}
 				remove_ideas = { FRA_defeatism }
 			}
-			load_focus_tree = french_focus
+			load_focus_tree = rework_france
 			#TODO_GABRIEL: Make scripted effect to give correct focuses depending on left/right
 		}
 	}

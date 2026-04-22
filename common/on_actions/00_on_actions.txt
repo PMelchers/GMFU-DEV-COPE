@@ -1,5 +1,18 @@
 on_actions = {
 	on_startup = {
+		effect = {
+			SAF = {
+				if = {
+					limit = {
+						NOT = { has_focus_tree = rework_saf }
+					}
+					load_focus_tree = {
+						tree = rework_saf
+						keep_completed = no
+					}
+				}
+			}
+		}
 
 		effect = {
 			# Add Canals

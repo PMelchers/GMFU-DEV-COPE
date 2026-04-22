@@ -3039,7 +3039,7 @@ country_event = {
 			}
 			FROM = { add_to_faction = ROOT }
 		}
-		load_focus_tree = french_focus
+		load_focus_tree = rework_france
 		# unlock_national_focus = FRA_revive_the_national_bloc
 		# unlock_national_focus = FRA_utilize_the_leagues
 		# unlock_national_focus = FRA_national_regeneration
@@ -3076,7 +3076,7 @@ country_event = {
 		ai_chance = {
 			factor = 50
 		}
-		load_focus_tree = french_focus
+		load_focus_tree = rework_france
 		# unlock_national_focus = FRA_revive_the_national_bloc
 		# unlock_national_focus = FRA_utilize_the_leagues
 		# unlock_national_focus = FRA_national_regeneration
@@ -3147,11 +3147,11 @@ country_event = {
 		}
 		FRA = {
 			annex_country = { target = VIC transfer_troops = yes }
-			load_focus_tree = french_focus
-			unlock_national_focus = FRA_revive_the_national_bloc
-			unlock_national_focus = FRA_laissez_faire
-			unlock_national_focus = FRA_protect_the_rights_of_man
-			unlock_national_focus = FRA_review_foreign_policy		
+			load_focus_tree = rework_france
+			unlock_national_focus = FRA_rw_rebuild_the_republic
+			unlock_national_focus = FRA_rw_mobilize_the_metropole
+			unlock_national_focus = FRA_rw_strengthen_the_unions
+			unlock_national_focus = FRA_rw_reform_the_army		
 		}
 	}
 }
@@ -3170,7 +3170,7 @@ country_event = {
 		ai_chance = {
 			factor = 80
 		}
-		load_focus_tree = french_focus
+		load_focus_tree = rework_france
 		# unlock_national_focus = FRA_revive_the_national_bloc
 		# unlock_national_focus = FRA_utilize_the_leagues
 		# unlock_national_focus = FRA_national_regeneration

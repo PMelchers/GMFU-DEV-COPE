@@ -1,0 +1,132 @@
+focus_tree = {
+	id = rework_france
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 200
+			tag = FRA
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 700 }
+
+	focus = {
+		id = FRA_rw_rebuild_the_republic
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = FRA_rw_mobilize_the_metropole
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = FRA_rw_rebuild_the_republic }
+		x = -1
+		y = 1
+		relative_position_id = FRA_rw_rebuild_the_republic
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_rw_strengthen_the_unions
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = FRA_rw_rebuild_the_republic }
+		x = 1
+		y = 1
+		relative_position_id = FRA_rw_rebuild_the_republic
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = FRA_rw_reform_the_army
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = FRA_rw_mobilize_the_metropole }
+		x = -1
+		y = 2
+		relative_position_id = FRA_rw_rebuild_the_republic
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_ARMY }
+		completion_reward = {
+			army_experience = 15
+		}
+	}
+
+	focus = {
+		id = FRA_rw_secure_the_empire
+		icon = GFX_focus_generic_befriend_neighboring_countries
+		prerequisite = { focus = FRA_rw_strengthen_the_unions }
+		x = 1
+		y = 2
+		relative_position_id = FRA_rw_rebuild_the_republic
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = FRA_rw_invest_in_air_power
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = FRA_rw_reform_the_army
+			focus = FRA_rw_secure_the_empire
+		}
+		x = 0
+		y = 3
+		relative_position_id = FRA_rw_rebuild_the_republic
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_AIR }
+		completion_reward = {
+			air_experience = 15
+		}
+	}
+}
