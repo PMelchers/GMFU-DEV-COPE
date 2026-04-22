@@ -41,13 +41,11 @@ mission_type_tactics = {
             value = 1
         }
     }
-
+    max_planning = -0.10
     command_power_gain = 0.02
     category_all_infantry = {
         max_organisation = 7.5
     }
-
-    
 
     rewards = {
         low_level_delegation ={
@@ -55,28 +53,35 @@ mission_type_tactics = {
             category_all_infantry = {
                 default_morale = 0.1
             }
+            planning_speed = 0.10
         }
         flexible_command = {
         #2
-            org_loss_when_moving = -0.075
+            planning_speed = 0.10
+            planning_decay_rate_factor = -0.40
         }
         maneouver_drills = {
         #3
             category_all_infantry = {
                 default_morale = 0.1
             }
-            category_all_armor = {
-                maximum_speed = 0.05
+            planning_speed = 0.10
+            signal_company = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    initiative = 0.02
+                }
             }
+            army_speed_factor = 0.05
             
         }
         flexible_combat_formations = {
         #4
-
             category_all_infantry = {
                 breakthrough = 0.05
                 max_organisation = 3
             }
+            planning_speed = 0.10
         }
         control_zone_responsibilities = {
         #5
@@ -87,7 +92,7 @@ mission_type_tactics = {
             category_tanks = {
                 default_morale = 0.2
             }
-
+            planning_speed = 0.10
         }
     }
 }
@@ -133,26 +138,33 @@ last_stand = {
         werwolf_groups = {
         #1
             resistance_damage_to_garrison_on_our_occupied_states = 0.25
-            pocket_penalty = -0.1
+            pocket_penalty = -0.25
             army_core_defence_factor = 0.05
         }
 
         pocket_consolidation = {
         #2
-            category_all_infantry = {
+            category_army = {
                 defense = 0.15
-                breakthrough = -0.1
             }
+            land_reinforce_rate = 0.10
         }
         digging_in = {
         #3
             out_of_supply_factor = -0.10
-            category_all_infantry = {
-                entrenchment = 0.05
+            engineer = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    entrenchment = 0.50
+                    add = yes
+                }
             }
         }
         stocking_up = {
         #4
+            category_army = {
+                breakthrough = -0.1
+            }
             no_supply_grace = 36 
         }
         breaking_out = {

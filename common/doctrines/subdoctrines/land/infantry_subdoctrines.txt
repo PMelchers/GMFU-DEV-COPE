@@ -51,37 +51,34 @@ mobile_infantry = {
 
     rewards = {
         cavalry_charge = {
-            category_cavalry = {
-                breakthrough = 0.10
+            category_all_infantry = {
+               max_organisation = 4
+                maximum_speed = 0.05
             }
         }
         combined_arms_planning = {
-            category_all_infantry = {
-               max_organisation = 3
-                maximum_speed = 0.05
-            }
-            category_line_artillery = {
-                maximum_speed = 0.05
+            category_vehicle_infantry = {
+                default_morale = 0.1
+                defense = 0.15
             }
         }
         decisive_operations = {
             category_vehicle_infantry = {
                 max_organisation = 5
+                hardness = 0.05
             }
         }
         delegated_authority = {
             category_vehicle_infantry = {
-                default_morale = 0.04
-                soft_attack = 0.03
+                default_morale = 0.1
+                max_organisation = 5
+                breakthrough = 0.15
             }
         }
         maneuver_warfare = {
             category_all_infantry = {
-                max_organisation = 3
-                maximum_speed = 0.1
-            }
-            category_line_artillery = {
-                maximum_speed = 0.1
+               max_organisation = 4
+                maximum_speed = 0.05
             }
         }
 
@@ -133,35 +130,36 @@ defensive_postures = {
     }
 
     #OTHER BASE REWARDS
-    category_cavalry = {
-        supply_consumption = -0.01
-    }
     category_all_infantry = {
         entrenchment = 0.1
     }
 
     rewards = {
         improvised_fighting_position = {
-            dig_in_speed_factor = 0.05
+            dig_in_speed_factor = 0.15
         }
         elastic_operations = {
             category_all_infantry = {
-               max_organisation = 3
+                max_organisation = 7.5
                 defense = 0.050
             }
         }
         developed_trench_networking = {
-            category_all_infantry = {
-                entrenchment = 0.1
+            engineer = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    entrenchment = 0.50
+                    add = yes
+                }
             }
         }
         field_emplacements = {
             category_all_infantry = {
-                soft_attack = 0.03
+                max_organisation = 7.5
             }
         }
         field_construction_training = {
-            dig_in_speed_factor = 0.055
+            dig_in_speed_factor = 0.15
         }
 
     }
@@ -216,19 +214,15 @@ large_unit_tactics = {
    
     #OTHER BASE REWARDS
     
-    category_all_infantry = {
-        supply_consumption = -0.01
-    }
 
     rewards = {
         wide_trench_networks = {
-            dig_in_speed_factor = 0.050
+            land_reinforce_rate = 0.05
         }
         flexible_division_structures = {
         #2
-           unit_infantry_design_cost_factor = -1
             infantry = {
-                combat_width = -0.1
+                combat_width = -0.2
             }
         }
         unit_knowledge_sharing = {
@@ -236,25 +230,21 @@ large_unit_tactics = {
             category_all_infantry = {
                 experience_loss_factor = -0.01
             }
+            land_reinforce_rate = 0.05
         }
         large_front_offensive = {
         #4
             category_all_infantry = {
-                max_organisation = 3
-                soft_attack = 0.03
+                max_organisation = 5
             }
             army_morale = 0.1
+            land_reinforce_rate = 0.05
             
         }
         motorization_initiative = {
         #5
            category_all_infantry = {
                 breakthrough = 0.05
-                soft_attack = 0.03
-            }
-            category_vehicle_infantry = {
-                supply_consumption = -0.02
-                reliability = 0.05
             }
         }
 
@@ -311,100 +301,44 @@ assault_infantry = {
     rewards = {
         low_echelon_fire_support = {
         #1
-            hq_company = {
-                battalion_mult = {
-                    category = category_light_infantry
-                    soft_attack = 0.15
-                }
+            category_all_infantry = {
+                soft_attack = 0.05
+                breakthrough = 0.05
             }
         }
         organic_battalion_fire_support = {
         #2
-            category_artillery = {
-                soft_attack = 0.03
+            signal_company = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    initiative = 0.01
+                }
             }
-            category_anti_tank = {
-                ap_attack = 0.05
-                hard_attack = 0.05
-            }
-            category_anti_air = {
-                air_attack = 0.05
+            category_all_infantry = {
+                breakthrough = 0.05
             }
 
         }
 
         integrated_support_batteries = {
         #3
-            category_artillery = {
-                max_organisation = 3
-                soft_attack = 0.03
+            category_all_infantry = {
+                soft_attack = 0.05
+                breakthrough = 0.05
             }
         }
         breakthrough_fireteams = {
         #4
-            light_tank_recon = {
-                max_organisation = 10
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.1
-                }
-                battalion_mult = {
-                    category = category_all_infantry
-                    max_organisation = 2.5
-                    add = yes
-                }
+            category_all_infantry = {
+                soft_attack = 0.05
             }
-            armored_car_recon = {
-                max_organisation = 10
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.075
-                }
-                battalion_mult = {
-                    category = category_all_infantry
-                    max_organisation = 2.5
-                    add = yes
-                }
-            }
-            mot_recon = {
-                max_organisation = 10
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.05
-                }
-                battalion_mult = {
-                    category = category_all_infantry
-                    max_organisation = 2.5
-                    add = yes
-                }
-            }
+            
 
         }
         assault_detachments = {
         #5
-            category_artillery = {
-                supply_consumption = -0.05
-            }
-            light_assault_gun_brigade = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.05
-                    soft_attack = 0.03
-                }
-            }
-            medium_assault_gun_brigade = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.05
-                    soft_attack = 0.03
-                }
-            }
-            heavy_assault_gun_brigade = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    breakthrough = 0.05
-                    soft_attack = 0.03
-                }
+            category_all_infantry = {
+                breakthrough = 0.05
             }
 
         }
@@ -469,79 +403,39 @@ mounted_infantry = {
             category_cavalry = {
                 breakthrough = 0.10
                 defense = 0.05
+                soft_attack = 0.02
             }
         }
         mounted_skirmish_groups = {
-            recon = {
-               max_organisation = 3
-                soft_attack = 0.08
-                battalion_mult = {
-                    category = category_light_infantry
-                    soft_attack = 0.03
-                    defense = 0.05
-                }
-                battalion_mult = {
-                    category = category_light_infantry
-                    max_organisation = 2.5
-                    add = yes
-                }
-                battalion_mult = {
-                    category = category_cavalry
-                    soft_attack = 0.03
-                    defense = 0.05
-                }
-                battalion_mult = {
-                    category = category_cavalry
-                    max_organisation = 2.5
-                    add = yes
-                }
-            } 
             category_cavalry = {
-                max_organisation = 2.5
+                max_organisation = 3
+                soft_attack = 0.03
             }
         }
         anti_mechanized_cavalry_groups = {
             category_cavalry = {
-                hard_attack = 0.1
                 ap_attack = 0.1
             }
         }
         beasts_of_war = {
             category_cavalry = {
-                maximum_speed = 0.25 
+                maximum_speed = 0.10 
                 max_strength = 1.00 
-            }
-            recon = {
-                maximum_speed = 0.25
             }
         }
         limbered_combat_support = {
             pack_artillery_brigade = {
-                maximum_speed = 0.1
-            }
-            artillery_brigade = {
-                maximum_speed = 0.1
-            }
-            heavy_artillery_brigade = {
-                maximum_speed = 0.1
-            }
-            rocket_artillery_brigade = {
-                maximum_speed = 0.1
+                maximum_speed = 0.375
             }
             pack_antitank_brigade = {
-                maximum_speed = 0.1
+                maximum_speed = 0.375
             }
-            anti_tank_brigade = {
-                maximum_speed = 0.1
-            }
-            heavy_anti_tank_brigade = {
-                maximum_speed = 0.1
-            }
+            
             anti_air = {
-                maximum_speed = 0.1
+                maximum_speed = 0.375
             }
             heavy_anti_air = {
-                maximum_speed = 0.1
+                maximum_speed = 0.375
             }
         }
 
@@ -567,28 +461,6 @@ commandos = {
 
     ai_will_do = { base = 0 }
     enable_tactic = tactic_infantry_charge
-    
-    logistics_company = {
-        battalion_mult = {
-            category = category_light_infantry
-            max_strength = 5
-            add = yes
-        }
-    }
-    logistics_company_mot = {
-        battalion_mult = {
-            category = category_light_infantry
-            max_strength = 5
-            add = yes
-        }
-    }
-    logistics_company_horse = {
-        battalion_mult = {
-            category = category_light_infantry
-            max_strength = 5
-            add = yes
-        }
-    }
 
     # EFFECTS
     effect = {
@@ -610,17 +482,7 @@ commandos = {
             category_light_infantry = {
                 supply_consumption = -0.05
                 reliability = 0.05
-            }
-            field_hospital = {
-                casualty_trickleback = 0.05
-            }
-            helicopter_brigade = {
-                casualty_trickleback = 0.05
-            }
-            helicopter_field_hospital = {
-                casualty_trickleback = 0.05
-            }           
-
+            }       
         }
         security_zone_operations = {
 
@@ -636,64 +498,9 @@ commandos = {
                     defense = 0.05
                 }
             }
-            hq_company = {
-                battalion_mult = {
-                    category = category_light_infantry
-                    max_organisation = 0.02
-                }
-            }
-            logistics_company = {
-                battalion_mult = {
-                    category = category_vehicle_infantry
-                    max_strength = 5
-                    add = yes
-                }
-            }
-            logistics_company_mot = {
-                battalion_mult = {
-                    category = category_vehicle_infantry
-                    max_strength = 5
-                    add = yes
-                }
-            }
-            logistics_company_horse = {
-                battalion_mult = {
-                    category = category_vehicle_infantry
-                    max_strength = 5
-                    add = yes
-                }
-            }
-            category_vehicle_infantry = {
-                reliability = 0.05
-                breakthrough = 0.05
-            } 
             
         }
         rigorous_training_regimen = {
-            recon = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    soft_attack = 0.03
-                }
-            }
-            mot_recon = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    soft_attack = 0.03
-                }
-            }
-            armored_car_recon = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    soft_attack = 0.03
-                }
-            }
-            light_tank_recon = {
-                battalion_mult = {
-                    category = category_all_infantry
-                    soft_attack = 0.03
-                }
-            }
             
             infantry = {
                 desert = {
@@ -717,9 +524,17 @@ commandos = {
 
         integrated_assaults = {
             category_all_infantry = {
-                soft_attack = 0.03
+                soft_attack = 0.05
                 breakthrough = 0.05
             }
+            hq_company = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    max_strength = 5.0
+                    add = yes
+                }
+            }
+
         }
     }
 }
